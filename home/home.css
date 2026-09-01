@@ -1,51 +1,45 @@
 /* CABEÇALHO */
 
-a{
-    color: var(--branco);
+a {
+    color:var(--branco);
     text-decoration: none;
 }
-
-.cabecalho{
+.cabecalho {
     background-color: var(--azul-escuro);
 
-
     display: flex;
-    /* flex-direction: row; */
-
-    /*alinha no sentido do flex  */
     justify-content: space-between;
-
     align-items: center;
-    
-    padding:0 120px;
-    
-    height: 10vh; /* 10vh --> 10% da altura da tela */
+
+    padding: 0 120px ;
+
+    height:10vh /*10% da visualização vertical do dispositivo */
 }
 
-.navegacao{
+.navegacao {
     display: flex;
     align-items: center;
 
     gap: 50px;
 }
 
-.navegacao a{
+.navegacao a {
     text-transform: uppercase;
-    font-size: 1em; /* 1em = 16px */
+    font-size: 1em; /* equivale a 16px */
     font-weight: 500;
 }
 
-/* Conteudo Principal */
+/* Conteúdo-principal */
 
-.banner-principal{
+/* Primeiro Banner */
+.banner-principal {
     color: var(--branco);
-    
-    height: 70vh;  /* 70% da altura da tela */
 
-    background-image: url('../imgs/banner-principal-home.png');
+    height: 70vh;
+    background-image: url(../imgs/banner-principal-home.png);
     background-size: cover;
 
-    /* overflow: hidden; */ /*Evita que os elementos transbordem.*/
+    /* overflow: hidden; Evitem que os elmentos transbordem */
 
     display: flex;
     align-items: center;
@@ -54,37 +48,161 @@ a{
     padding: 0 120px;
 }
 
-.texto-banner{
+.texto-banner {
     height: 100%;
 
     display: flex;
     flex-direction: column;
 
+    justify-content: center;
     align-items: flex-start;
-    justify-content: center; 
-    
+
     gap: 50px;
 }
 
 .texto-banner p {
-    font-size: 1.5em; /* 1.5em = 24px */
-    width: 50%; /* 50% da largura do container */
+    font-size: 1.5em;
+    width: 60%;
 }
 
 .botao {
     padding: 20px 50px;
-
     border-radius: 10px;
 
     background-color: var(--cor-destaque);
     color: var(--azul-escuro);
 
-    font-size: 1.2em; /* 1.2em = 19.2px */
+    font-size: 1.2em;
     font-weight: 700;
 }
 
-.banner-principal img{
+.botao:hoover {
+    background-color: #2ab2ab;
+    color: var(--branco);
+    /* cursor: pointer; */
+    transition: 0.3s;
 
-    align-self: flex-end; /* Alinha o elemento no final do container */
-    width: 35%; /* 35% da largura do container */
+    text-transform: uppercase;
 }
+
+
+.banner-principal img {
+    align-self: flex-end;
+    width: 35%;
+
+}
+
+.titulo-secao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-secao h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.titulo-secao span {
+    display: flex;
+    width: 250px;
+    height: 4px;
+    background-color: var(--cor-destaque);
+}
+
+/* sEÇÃO BENEFÍCIOS*/
+
+.beneficios {
+    padding: 50px 120px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+}
+
+.beneficios-lista {
+    display: grid;
+    grid-template-columns: repeat(3, 20%);
+    gap: 10%;
+
+    justify-content: center;
+}
+
+.beneficio {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 80px 20px 50px;
+    border: 1px solid var(--azul-escuro);
+    border-radius: 30px;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.25);   /*x -> y --> blur -> cor com transparência*/
+    text-align: center;
+
+/* Cria referência de posicionamento para o ícone, quando o ícone for poicionado, usa esse card como referência */
+/* sSem isso, o círculo poderia usar outro elemento da página como referência e sair passeando pelo layout */
+    position: relative;
+}
+
+.beneficio-icone img {
+    width: 50%;
+}
+
+.beneficio-icone {
+    border: 4px solid var(--cor-destaque);
+    background-color: var(--branco);
+    border-radius: 50%;
+
+    width: 30%;
+    height: 30%;
+
+    /* Retira o ícone do fluxo normal, com o absolute ele pode ficar por cima do card */
+    position: absolute;
+
+    /* MOve o círculo para cima, o valor negativo faz ele sair praticamente do card */
+    top: -15%;
+
+    /* Coloca o começo do elemento em 50% da largura do card */
+    left: 50%;
+
+    /*Ajustamos o posicionamento do elemento, mas a borda esquerda do círculo fica no centro, não o círculo inteiro, por isso usamos o transform: translateX(-50%); que move o próprio círculo para a esquerda em 50% da largura dele, ficando perfeitamente centralizado*/
+    transform: translateX(-50%);
+
+    display: grid;
+    place-items: center;
+    /* place-itens:center; é a mesma coisa que colocar: align-items:center; e justify-content:center; */
+}
+
+.beneficio h3 {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    width: 80%;
+}
+
+
+.beneficio p {
+    font-size: 1em;
+    width: 80%;
+}
+
+/* Banner do meio */
+.banner-meio {
+    height: 60vh;
+    background-image: url(../imgs/Banner\ centro.svg);
+    background-size: cover;
+
+    display: flex;
+    justify-content: flex-end;
+
+    padding: 0 120px;
+    color: var(--branco);
+}
+
+/* Seção de recomendação */
