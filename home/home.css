@@ -108,6 +108,7 @@ a {
     width: 250px;
     height: 4px;
     background-color: var(--cor-destaque);
+    margin-bottom: 50px;
 }
 
 /* sEÇÃO BENEFÍCIOS*/
@@ -128,7 +129,7 @@ a {
     display: grid;
     grid-template-columns: repeat(3, 20%);
     gap: 10%;
-
+    margin-bottom: 50px;
     justify-content: center;
 }
 
@@ -206,3 +207,136 @@ a {
 }
 
 /* Seção de recomendação */
+.recomendacao .titulo-secao {
+    display: flex;
+    padding: 50px;
+}
+
+
+/* Container principal - */
+.recomendacao-lista {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start;
+    gap: 50px; 
+    margin-bottom: 100px;
+}
+
+
+.recomendacao-item {
+    display: flex;
+    flex-direction: column; 
+    width: 200px; 
+
+    align-items: center;
+    text-align: center;
+}
+
+/* A capa do livro */
+.recomendacao-item img {
+    width: 100%; 
+    height: auto;
+    margin-bottom: 12px; 
+}
+
+/* O título do livro */
+.recomendacao-item h3 {
+    font-size: 16px;
+    margin: 0 0 5px 0; 
+}
+/* Autor(a):*/
+.recomendacao-item h4 {
+    font-size: 14px;
+    margin: 0; 
+}
+
+/* O nome do autor */
+.recomendacao-item p {
+    font-size: 14px;
+    margin: 2px 0 0 0; 
+}
+
+
+/* Footer */
+
+.footer{
+    background-color: var(--azul-escuro);
+    height: 447px;
+    padding:100px 120px 59px;
+    
+}
+.footer-cima{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;    
+    margin-bottom: 40px;
+}
+.footer-logos{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.footer-infos {
+    display: flex;
+    flex-direction: column;
+    gap: 70px; 
+}
+
+.footer-menus{
+    display: flex;
+    gap: 200px;
+}
+
+.footer-coluna {
+    display: flex;
+    flex-direction: column;
+    gap: 15px
+}
+
+.footer-coluna h4, .footer-social h4{
+    color: var(--cor-destaque);
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.footer-coluna a {
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+
+
+.footer-social{
+    display: flex;
+    gap: 150px;
+}
+
+.icones-social {
+    display: flex;
+    gap: 15px; /* Espaço entre as bolinhas das redes sociais */
+}
+
+/* LINHA SEPARADORA ------------------------------------------------------- */
+.footer footer-separador{
+    background-color: var(--branco);
+    border: none;
+    width: 500px;
+    height: 2px;
+    margin-bottom: 40px;
+}
+
+.footer-inferior{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    font-size: 12px;
+    color: var(--branco);
+    gap: 20px;
+}
+
+.recomendacao-item img {
+    height: 300px;
+}
