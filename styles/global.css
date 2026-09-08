@@ -12,7 +12,8 @@
     --text: #26333d;
     --branco: #ffffff;
     --cor-destaque: #2fd6cb;
-    --fundos: #e9f0ef
+    --fundos: #e9f0ef;
+    --texto-pagina: #535353;
 }
 
 html {
